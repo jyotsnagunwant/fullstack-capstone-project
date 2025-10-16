@@ -1,4 +1,11 @@
 /*jshint esversion: 8 */
+function myApp() {
+    'use strict';
+    console.log('Hello, World!');
+}
+
+myApp();
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -23,6 +30,8 @@ app.use(express.json());
 
 // Route files
 // Gift API Task 1: import the giftRoutes and store in a constant called giftroutes
+const authRoutes = require('./routes/authRoutes');
+
 const giftRoutes = require('./routes/giftRoutes');
 
 // Search API Task 1: import the searchRoutes and store in a constant called searchRoutes
